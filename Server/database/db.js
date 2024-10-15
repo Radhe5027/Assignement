@@ -1,5 +1,5 @@
 const{Sequelize} = require('sequelize');
-const sequelize = new Sequelize('Ecommerce_Db','postgres','8908576667',{
+const sequelize = new Sequelize('Ecommerce_Db','postgres','8908576665',{
     host:'localhost',
     dialect:'postgres'
 });
@@ -15,5 +15,5 @@ async function testConnection() {
   }
   
   
-  testConnection();
-  module.exports=sequelize;
+testConnection();
+module.exports=sequelize;
