@@ -1,6 +1,7 @@
 const { DataTypes } = require('sequelize');
 const sequelize = require('../database/db.js');
 const Category = require('./categories.js'); // Import the Category model
+const ProductVariant = require('./product_variants.js');
 
 const Product = sequelize.define('Product', {
   id: {
@@ -40,6 +41,11 @@ const Product = sequelize.define('Product', {
     type: DataTypes.ENUM('active', 'inactive'),
     allowNull: false,
   },
+
+  image_url:{
+    type:DataTypes.TEXT,
+    allowNull:true
+  }
 }, {
   tableName: 'Product',
   timestamps: false,

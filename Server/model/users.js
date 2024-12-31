@@ -1,12 +1,11 @@
 const { DataTypes } = require('sequelize');
 const sequelize = require('../database/db.js'); 
 const UserRole = require('./user_roles');
-
 const Users = sequelize.define('Users',{
     //Define attributes
 
     id:{
-        type:DataTypes.STRING,
+        type:DataTypes.INTEGER,
         primaryKey:true,
         unique:true,
         autoIncrement:true,

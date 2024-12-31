@@ -1,6 +1,6 @@
 const { DataTypes } = require('sequelize');
 const sequelize = require('../database/db.js');
-const Product = require('./products');
+const Product = require('./products.js');
 
 const ProductVariant = sequelize.define('ProductVariant', {
   id: {
@@ -31,11 +31,16 @@ const ProductVariant = sequelize.define('ProductVariant', {
     type: DataTypes.INTEGER,
     allowNull: false,
   },
+
+  image_url:{
+    type:DataTypes.TEXT,
+    allowNull:true
+  },
 }, {
   tableName: 'ProductVariant',
   timestamps: false,
 });
 
-ProductVariant.belongsTo(Product, { foreignKey: 'product_id' });
+//ProductVariant.belongsTo(Product, { foreignKey: 'product_id' });
 
 module.exports = ProductVariant;
